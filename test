@@ -1,0 +1,24 @@
+; Digit sum of factorial
+    LOADI 0
+    STORE Erg
+    LOADI 10
+    STORE N    
+    LOAD N
+    STORE fak
+    LOADI 1
+fakul: LOAD N
+    SUBI 1
+    JMPZ sum
+    STORE N
+    MUL fak
+    STORE fak
+    JMP fakul
+sum: LOAD fak
+    MODI 10
+    ADD Erg
+    STORE Erg
+    LOAD fak
+    DIVI 10
+    STORE fak
+    JMPNZ sum
+    HOLD
